@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="系统设置">
+        <Preference android:title="社交网络账号管理" android:key="share_account"/>
+        <CheckBoxPreference android:key="sound_hint" android:selectable="true" android:summary="选中开启消息声音提示" android:title="消息提示音"/>
+        <EditTextPreference android:key="set_tag" android:title="设置我的标签" android:dialogTitle="设置我的标签"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="其他">
+        <Preference android:title="检查版本更新" android:key="check_update"/>
+        <Preference android:title="意见反馈" android:summary="发送您的宝贵意见" android:key="advise"/>
+        <Preference android:title="关于播播" android:key="about"/>
+        <Preference android:title="关于作者" android:key="author"/>
+    </PreferenceCategory>
+</PreferenceScreen>

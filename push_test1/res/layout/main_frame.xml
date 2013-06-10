@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/show_main_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/main_frame_footer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                layout="@layout/footer"
+                android:visibility="visible" />
+
+            <ViewFlipper
+                android:id="@+id/main_frame_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/main_frame_footer"
+                android:layout_alignParentTop="true"
+                android:visibility="visible" >
+
+                <fragment
+                    android:id="@+id/publish_fragment"
+                    android:name="com.svo.love.activity.fragment.PublishFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <fragment
+                    android:id="@+id/msg_fragment"
+                    android:name="com.svo.love.activity.fragment.MsgFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <fragment
+                    android:id="@+id/friend_fragment"
+                    android:name="com.svo.love.activity.fragment.FriendFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <fragment
+                    android:id="@+id/set_fragment"
+                	android:name="com.svo.love.activity.fragment.MeFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ViewFlipper>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

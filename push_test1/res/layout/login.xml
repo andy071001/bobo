@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash" >
+
+    <Button
+        android:id="@+id/sina"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="200dip"
+        android:background="@drawable/btn_login_sina"
+        android:text="新浪微博登录"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:layout_below="@+id/sina"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip" >
+
+        <Button
+            android:id="@+id/qq"
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_login_qq"
+            android:text="QQ账号登录"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/renren"
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dip"
+            android:background="@drawable/btn_login_renren"
+            android:text="人人网账号登录"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/try_use"
+        android:layout_width="104dip"
+        android:layout_height="21dip"
+        android:layout_below="@+id/two"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:visibility="invisible"
+        android:src="@drawable/btn_try_read" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:text="你的心声,TA的新生"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo2" />
+
+</RelativeLayout>

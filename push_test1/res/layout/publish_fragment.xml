@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_par"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@android:color/darker_gray" >
+
+        <Spinner
+            android:id="@+id/filter_spinner"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:background="@drawable/spinner_ab_default_holo_light"
+            android:entries="@array/publish_filter"
+            android:prompt="@string/filter" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="66dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dip"
+            android:background="@drawable/btn_back_style"
+            android:text="播一播"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/msgListview"
+        android:layout_below="@+id/top_par"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/no_info_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_below="@+id/top_par"
+        android:textSize="18sp"
+        android:lines="1"
+        android:text="点击　&apos;播一播&apos;　开始广播我的心声"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">播播</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    
+    <string name="man">男性</string>
+    <string name="woman">女性</string>
+    <string name="all">所有</string>
+    <string name="filter">过滤</string>
+    <string name="get_my_id">获得我的播播号</string>
+</resources>

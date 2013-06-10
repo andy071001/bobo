@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:orientation="vertical" >
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/et_bg"
+            android:hint="请输入标签名"
+            android:textColor="@android:color/black" >
+        </MultiAutoCompleteTextView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/title_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="22dip"
+        android:background="@drawable/et_bg"
+        android:hint="标题 "
+        android:inputType="textMultiLine"
+        android:paddingLeft="5dip" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="28dip"
+        android:background="@drawable/et_bg"
+        android:hint="正文"
+        android:inputType="textMultiLine"
+        android:paddingLeft="5dip" />
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="60dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/btn_back_style"
+        android:text="发送" />
+
+</LinearLayout>

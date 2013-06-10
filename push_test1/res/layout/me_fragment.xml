@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back_white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人中心"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/set" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerHorizontal="true"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/person_btn"
+                    android:layout_width="280dip"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="50dip"
+                    android:background="@drawable/style_settingtop_checked"
+                    android:gravity="center"
+                    android:text="我的信息"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/my_broad_btn"
+                    android:layout_width="280dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/style_settingcenter_checked"
+                    android:gravity="center"
+                    android:text="我的广播"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/my_tag"
+                    android:layout_width="280dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/style_settingcenter_checked"
+                    android:gravity="center"
+                    android:text="我的标签"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/device_btn"
+                    android:layout_width="280dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/style_settingbottom_checked"
+                    android:gravity="center"
+                    android:text="@string/get_my_id"
+                    android:textSize="18sp" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
