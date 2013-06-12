@@ -45,9 +45,9 @@ public class MyReceiver extends BroadcastReceiver {
             Log.d(TAG, "用户点击打开了通知");
             
         	//打开自定义的Activity
-        	Intent i = new Intent(context, TestActivity.class);
-        	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        	context.startActivity(i);
+//        	Intent i = new Intent(context, TestActivity.class);
+//        	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        	context.startActivity(i);
         } else {
         	Log.d(TAG, "Unhandled intent - " + intent.getAction());
         }
