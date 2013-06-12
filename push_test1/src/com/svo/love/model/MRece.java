@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 
 public class MRece implements IConstants{
@@ -99,6 +100,12 @@ public class MRece implements IConstants{
 		ReceEntity entity = gson.fromJson(extra, ReceEntity.class);
 		if (entity == null || "新人报到".equals(title)) {
 			return ;
+		}
+		String userRealName = new MUser(context).getUserRealName();
+		Log.i(TAG, "subhead:"+entity.getSubHead());
+		if (!TextUtils.isEmpty(userRealName) && !TextUtils.isEmpty(entity.getSubHead())&&entity.getSubHead().contains(userRealName)) {
+			MNotify notify = new MNotify(context);
+			notify.notifyLove(entity.getSubHead());
 		}
 		switch (entity.getSend_type()) {
 		case SEND_WITH_IMEI: //发送给某个设备的.(消息)

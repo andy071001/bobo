@@ -16,6 +16,7 @@ import android.util.Log;
 
 import com.svo.love.MainActivity;
 import com.svo.love.model.MPush;
+import com.svo.love.model.MUser;
 import com.svo.love.util.IConstants;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.bean.SocializeUser;
@@ -123,7 +124,7 @@ public class MShare {
 					@Override
 					public void onComplete(String arg0) {
 						Log.i(TAG, "msg:"+arg0);
-						saveUserInfo(arg0);
+						new MUser(activity).saveUserInfo(arg0);
 						new MPush(activity).setSexTag(activity.getSharedPreferences(IConstants.PREFERENCE_NAME,Context.MODE_PRIVATE).getString("sex", "woman"),new MPush(activity).getDeviceId());
 						new MPush(activity).sayHello();
 						dismissDialog();
@@ -138,37 +139,6 @@ public class MShare {
 			}
 		});
 	}
-	public void saveUserInfo(SocializeUser user) {
-		SharedPreferences preferences = activity.getSharedPreferences(IConstants.PREFERENCE_NAME, Context.MODE_PRIVATE);
-		Editor editor = preferences.edit();
-		editor.putString("userName", user.loginAccount.getUserName());
-		editor.putString("age", user.loginAccount.getBirthday());
-		editor.putString("uid", user.loginAccount.getUsid());
-		String sex = user.loginAccount.getGender().name().equalsIgnoreCase("male")?"man":"woman";
-		editor.putString("sex", sex);
-		editor.putString("extra", user.loginAccount.getExtendArgs());
-		editor.putString("icon_url", user.loginAccount.getAccount_icon_url());
-		editor.putString("platform", user.loginAccount.getPlatform());
-		editor.commit();
-	}
-	//新浪保存用户信息
-	public void saveUserInfo(String json) {
-		try {
-			JSONObject object = new JSONObject(json);
-			SharedPreferences preferences = activity.getSharedPreferences(IConstants.PREFERENCE_NAME, Context.MODE_PRIVATE);
-			Editor editor = preferences.edit();
-			editor.putString("userName", object.getString("screen_name"));
-			editor.putString("uid", object.getString("idstr"));
-			String sex = object.getString("gender").equalsIgnoreCase("m")?"man":"woman";
-			editor.putString("sex", sex);
-			editor.putString("qianMing", object.getString("description"));
-			editor.putString("city", object.getString("location"));
-			editor.putString("icon_url", object.getString("profile_image_url"));
-			editor.putString("platform", "sina");
-			editor.commit();
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		
-	}
+	
+	
 }

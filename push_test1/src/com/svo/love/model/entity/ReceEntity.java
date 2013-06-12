@@ -19,7 +19,13 @@ public class ReceEntity implements Serializable,Comparable<ReceEntity>{
 	
 	private int send_type; //发送消息类型
 	private String sex;
-	private String subHead;//副标题
+	private String subhead;//副标题
+	public String getSubHead() {
+		return subhead;
+	}
+	public void setSubHead(String subhead) {
+		this.subhead = subhead;
+	}
 	//发送时间
 	private String time;
 	private String title;
@@ -73,9 +79,6 @@ public class ReceEntity implements Serializable,Comparable<ReceEntity>{
 		}
 		return sex;
 	}
-	public String getSubHead() {
-		return subHead;
-	}
 	public String getTime() {
 		return time;
 	}
@@ -117,9 +120,6 @@ public class ReceEntity implements Serializable,Comparable<ReceEntity>{
 	}
 	public void setSex(String sex) {
 		this.sex = sex;
-	}
-	public void setSubHead(String subHead) {
-		this.subHead = subHead;
 	}
 	public void setTime(String time) {
 		this.time = time;

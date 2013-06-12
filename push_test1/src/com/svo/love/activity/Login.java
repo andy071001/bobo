@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.svo.love.MainActivity;
 import com.svo.love.R;
 import com.svo.love.model.MPush;
+import com.svo.love.model.MUser;
 import com.svo.love.share.MShare;
 import com.svo.love.util.IConstants;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -98,7 +99,7 @@ public class Login extends Activity implements OnClickListener {
 				progressDialog.dismiss();
 			}
 			if (user != null && user.loginAccount != null) {
-				mShare.saveUserInfo(user);
+				new MUser(Login.this).saveUserInfo(user);
 				new MPush(Login.this).setSexTag(getSharedPreferences(IConstants.PREFERENCE_NAME,MODE_PRIVATE).getString("sex", "woman"),new MPush(Login.this).getDeviceId());
 				new MPush(Login.this).sayHello();
 				startActivity(new Intent(Login.this, MainActivity.class));
