@@ -58,7 +58,7 @@ public class HistoryActvity extends Activity implements OnItemLongClickListener{
 		new AlertDialog.Builder(this).setTitle("确认").setMessage("删除这条信息？").setPositiveButton("确定", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				new MRece(HistoryActvity.this).delOneItem(sendEntities.get(arg2).get_id());
+				new MRece(HistoryActvity.this).delOneItem(sendEntities.get(arg2).get_id(),"send");
 				sendEntities.remove(arg2);
 				adapter.notifyDataSetChanged();
 			}

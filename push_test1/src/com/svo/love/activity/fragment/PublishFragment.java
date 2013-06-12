@@ -185,7 +185,7 @@ public class PublishFragment extends Fragment implements OnItemClickListener,OnI
 		new AlertDialog.Builder(getActivity()).setTitle("确认").setMessage("删除这条信息？").setPositiveButton("确定", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				new MRece(getActivity()).delOneItem(entities.get(arg2).get_id());
+				new MRece(getActivity()).delOneItem(entities.get(arg2).get_id(),"rece");
 				entities.remove(arg2);
 				msgAdapter.notifyDataSetChanged();
 			}

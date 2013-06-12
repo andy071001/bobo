@@ -6,8 +6,10 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
         android:text="设置账户信息"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

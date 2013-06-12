@@ -145,8 +145,8 @@ public class MRece implements IConstants{
 	 * 删除某条广播 
 	 * @param get_id
 	 */
-	public void delOneItem(String _id) {
-		String sql = "delete from send where _id = ?";
+	public void delOneItem(String _id,String tableName) {
+		String sql = "delete from "+tableName+" where _id = ?";
 		SQLiteDatabase database = dbHelper.getWritableDatabase();
 		database.execSQL(sql, new String[] { _id });
 	}
